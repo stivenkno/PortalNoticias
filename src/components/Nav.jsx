@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Search from "./Search";
 
 function Nav() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [initialRender, setInitialRender] = useState(true);
+  const [searchArticle, setSearchArticle] = useState("");
 
   const navigate = useNavigate();
 
@@ -56,10 +58,16 @@ function Nav() {
               type="text"
               placeholder="Buscar..."
               className="px-3 py-2 rounded-l-md text-gray-700 focus:outline-none"
+              onChange={(e) => {
+                setSearchArticle(e.target.value); // Actualiza el estado
+              }}
             />
             <button
               type="submit"
               className="bg-white text-blue-600 px-3 py-2 rounded-r-md hover:bg-gray-200 focus:outline-none"
+              onClick={() => {
+                navigate(`search/${searchArticle}`);
+              }}
             >
               Buscar
             </button>

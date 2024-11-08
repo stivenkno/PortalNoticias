@@ -21,7 +21,13 @@ export const apiSlice = createApi({
         url: `top-headlines?category=${category}`,
       }),
     }),
+    getSearch: builder.query({
+      query: (searchArticle) => ({
+        url: `everything?q=${searchArticle}`,
+      }),
+    }),
   }),
 });
 
-export const { useGetPostQuery, useGetCategoriesQuery } = apiSlice;
+export const { useGetPostQuery, useGetCategoriesQuery, useGetSearchQuery } =
+  apiSlice;
