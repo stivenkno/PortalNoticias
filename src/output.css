@@ -588,9 +588,9 @@ video {
   }
 }
 
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-auto {
@@ -622,6 +622,10 @@ video {
   width: 100%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -642,10 +646,6 @@ video {
   gap: 2rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -658,11 +658,6 @@ video {
 .rounded-r-md {
   border-top-right-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
-}
-
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
 }
 
 .bg-blue-950 {
@@ -717,14 +712,13 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-semibold {
@@ -751,6 +745,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -772,7 +771,19 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Georgia", serif;
+  background-color: rgb(232, 226, 226);
+  font-family: system-ui, -apple-system,
+    /* iOS Safari, macOS Safari, macOS Firefox */ BlinkMacSystemFont,
+    /* macOS Chrome */ "Segoe UI", /* Windows */ "Roboto",
+    /* Android, Chrome OS */ "Oxygen", /* KDE */ "Ubuntu",
+    /* Ubuntu */ "Cantarell", /* GNOME */ "Fira Sans",
+    /* Firefox OS */ "Droid Sans", /* Old Android */ "Helvetica Neue",
+    /* Old macOS */ sans-serif;
+  /* Generic fallback */
+  /* Optimizaciones opcionales */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 img {

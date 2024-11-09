@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetSearchQuery } from "../redux/apiSlice";
-import Articles from "./Articles";
+import SearchResults from "./SearchResults";
 
 export default function Search() {
   const { searchArticle } = useParams();
@@ -11,5 +11,5 @@ export default function Search() {
   if (isError) return <p>Error al cargar datos</p>;
 
   console.log(searchArticle);
-  return <Articles data={data} />;
+  return <SearchResults data={data} />;
 }

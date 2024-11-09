@@ -7,7 +7,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Georgia", serif;
+  background-color: rgb(232, 226, 226);
+  font-family: system-ui, -apple-system,
+    /* iOS Safari, macOS Safari, macOS Firefox */ BlinkMacSystemFont,
+    /* macOS Chrome */ "Segoe UI", /* Windows */ "Roboto",
+    /* Android, Chrome OS */ "Oxygen", /* KDE */ "Ubuntu",
+    /* Ubuntu */ "Cantarell", /* GNOME */ "Fira Sans",
+    /* Firefox OS */ "Droid Sans", /* Old Android */ "Helvetica Neue",
+    /* Old macOS */ sans-serif; /* Generic fallback */
+
+  /* Optimizaciones opcionales */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 img {
   width: 100%;

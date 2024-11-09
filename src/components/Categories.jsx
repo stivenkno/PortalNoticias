@@ -1,6 +1,6 @@
 import { useGetCategoriesQuery } from "../redux/apiSlice";
 import { useParams } from "react-router-dom";
-import Articles from "./Articles";
+import SearchResults from "./SearchResults";
 
 export default function Categories() {
   const { category } = useParams();
@@ -12,7 +12,7 @@ export default function Categories() {
 
   return (
     <>
-      <Articles data={data} />
+      <SearchResults data={data} />
     </>
   );
 }
